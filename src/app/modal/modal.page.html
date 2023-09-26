@@ -1,0 +1,77 @@
+<ion-header>  
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-button (click)="dismiss()">OK</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>  
+ 
+<ion-content class="ion-padding">     
+  <ion-list>
+    <ion-item> 
+      <ion-input labelPlacement="floating" label="Rótulo:" [readonly]="true" value="{{modalObj['Rótulo']}}"></ion-input>
+    </ion-item>
+    <ion-item> 
+      <ion-input labelPlacement="floating" label="Localidad:" [readonly]="true" value="{{modalObj.Localidad}}"></ion-input>
+    </ion-item>
+    <ion-item> 
+      <ion-input labelPlacement="floating" label="Provincia:" [readonly]="true" value="{{modalObj['Provincia']}}"></ion-input>
+    </ion-item>
+    <ion-item> 
+      <ion-input labelPlacement="floating" label="C.P.:" [readonly]="true" value="{{modalObj['C.P.']}}"></ion-input>
+    </ion-item>
+    <ion-item> 
+      <ion-input label-placement="floating" label="Dirección:" [readonly]="true" value="{{modalObj['Dirección']}}"></ion-input>
+    </ion-item>
+    <ion-item> 
+      <ion-input labelPlacement="fixed" label="Horario:" [readonly]="true" value="{{modalObj['Horario']}}"></ion-input>
+    </ion-item>
+
+    <ion-item color="danger" >
+      <ion-input labelPlacement="floating" label="Listado de precios" [readonly]="true"></ion-input >
+    </ion-item>
+
+    <ion-item *ngIf="modalObj['Precio Biodiesel']"> 
+      <ion-input labelPlacement="floating" label="Precio Biodiesel:" [readonly]="true" value="{{modalObj['Precio Biodiesel']}}€"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="modalObj['Precio Bioetanol']"> 
+      <ion-input  labelPlacement="floating" label="Precio Bioetanol:" [readonly]="true" value="{{modalObj['Precio Bioetanol']}}€"></ion-input >
+    </ion-item>
+    <ion-item *ngIf="modalObj['Precio Gas Natural Comprimido']"> 
+      <ion-input labelPlacement="floating" label="Precio Gas Natural Comprimido:" [readonly]="true" value="{{modalObj['Precio Gas Natural Comprimido']}}€"></ion-input >
+    </ion-item>
+    <ion-item *ngIf="modalObj['Precio Gas Natural Licuado']"> 
+      <ion-input  labelPlacement="floating" label="Precio Gas Natural Licuado:" [readonly]="true" value="{{modalObj['Precio Gas Natural Licuado']}}€"></ion-input >
+    </ion-item>
+    <ion-item *ngIf="modalObj['Precio Gases licuados del petróleo']"> 
+      <ion-input  labelPlacement="floating" label="Precio Gases licuados del petróleo:" [readonly]="true" value="{{modalObj['Precio Gases licuados del petróleo']}}€"></ion-input >
+    </ion-item>
+    <ion-item *ngIf="modalObj['Precio Gasoleo A']" > 
+      <ion-input labelPlacement="floating" label="Precio Gasoleo A:" [readonly]="true" value="{{modalObj['Precio Gasoleo A']}}€"></ion-input >
+    </ion-item>
+    <ion-item *ngIf="modalObj['Precio Gasoleo B']"> 
+      <ion-input  labelPlacement="floating" label="Precio Gasoleo B:" [readonly]="true" value="{{modalObj['Precio Gasoleo B']}}€"></ion-input >
+    </ion-item>
+    <ion-item *ngIf="modalObj['Precio Gasoleo Premium']"> 
+      <ion-input  labelPlacement="floating" label="Precio Gasoleo Premium:" [readonly]="true" value="{{modalObj['Precio Gasoleo Premium']}}€"></ion-input >
+    </ion-item>
+    <ion-item *ngIf="modalObj['Precio Gasolina 95 E5']"> 
+      <ion-input  labelPlacement="floating" label="Precio Gasolina 95 E5:" [readonly]="true" value="{{modalObj['Precio Gasolina 95 E5']}}€"></ion-input >
+    </ion-item>
+    <ion-item *ngIf="modalObj['Precio Gasolina 95 E5 Premium']"> 
+      <ion-input  labelPlacement="floating" label="Precio Gasolina 95 E5 Premium:" [readonly]="true" value="{{modalObj['Precio Gasolina 95 E5 Premium']}}€"></ion-input >
+    </ion-item>
+    <ion-item *ngIf="modalObj['Precio Gasolina 95 E10']"> 
+      <ion-input  labelPlacement="floating" label="Precio Gasolina 95 E10:" [readonly]="true" value="{{modalObj['Precio Gasolina 95 E10']}}€"></ion-input >
+    </ion-item>
+    <ion-item *ngIf="modalObj['Precio Gasolina 98 E5']"> 
+      <ion-input  labelPlacement="floating" label="Precio Gasolina 98 E5:" [readonly]="true" value="{{modalObj['Precio Gasolina 98 E5']}}€"></ion-input >
+    </ion-item>
+    <ion-item *ngIf="modalObj['Precio Gasolina 98 E10']"> 
+      <ion-input  labelPlacement="floating" label="Precio Gasolina 98 E10:" [readonly]="true" value="{{modalObj['Precio Gasolina 98 E10']}}€"></ion-input >
+    </ion-item>
+    <ion-item *ngIf="modalObj['Precio Hidrogeno']"> 
+      <ion-input  labelPlacement="floating" label="Precio Hidrogeno:" [readonly]="true" value="{{modalObj['Precio Hidrogeno']}}€"></ion-input >
+    </ion-item>
+  </ion-list>
+</ion-content>

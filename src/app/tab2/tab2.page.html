@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-title>
+      Mapa
+    </ion-title>
+    <ion-icon name="locate" slot="end" style="padding-right: 20px;"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Mapa</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <capacitor-google-map id="map"></capacitor-google-map>
+  </ion-content>
+  <app-explore-container name="Tab 2 page"></app-explore-container>
+</ion-content>

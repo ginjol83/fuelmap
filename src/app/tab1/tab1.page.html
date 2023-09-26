@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger" slot="top">
+    <ion-title>
+      Gasolineras cercanas 
+    </ion-title>
+    <ion-icon name="locate" (click)="printCurrentPosition('refresh')" slot="end" style="padding-right: 20px;"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Gasolineras cercanas</ion-title>
+      <ion-icon name="locate" slot="end" ></ion-icon>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-card *ngFor="let item of listaBaratas" id="open-modal" (click)="popup(item.IDEESS)" > 
+    <ion-card-header *ngIf="item['Precio Gasolina 95 E5']">
+      <ion-card-title><ion-icon src="../../assets/icon/iconoGas.svg"></ion-icon> {{item['Rótulo']}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content *ngIf="item['Precio Gasolina 95 E5']">
+      <p>Localidad: {{item.Localidad}}</p>
+      <p>Precio Gasolina 95: {{item['Precio Gasolina 95 E5']}}€</p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
